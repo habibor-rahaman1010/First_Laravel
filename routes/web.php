@@ -20,4 +20,4 @@ Route::get('/about/us', [MainController::class, 'About'])->name('about');
 Route::get('/write/post', [MainController::class, 'WritePost'])->name('post');
 Route::get('/contact/us', [MainController::class, 'Contact'])->name('contact');
 Route::get('/view/posts/{id}', [MainController::class, 'View_post']);
-
+Route::post('/upload/posts', [MainController::class, 'Upload_Post'])->name('upload');

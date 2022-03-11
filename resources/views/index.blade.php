@@ -9,17 +9,19 @@
                 <div class="post-preview">
                     <a href="{{URL::to('/view/posts/'.$item->id)}}">
                         <h2 class="post-title">{{$item->title}}</h2>
-                        <h3 class="post-subtitle">{{substr($item->details, 0, 100).'....'}}</h3>
+                        <h3 class="post-subtitle"> {!!substr($item->details, 0, 100).'....'!!}</h3>
                     </a>
                     <p class="post-meta">
                         Posted by
                         <a href="#!">{{$item->author}}</a>
-                        on September 24, 2021
+                        on {{$item->created_at}}
                     </p>
                 </div>
                 <!-- Divider-->
                 <hr class="my-4" />
-            @endforeach           
+            @endforeach  
+            
+            {{$posts->links()}}
           
         
             <!-- Pager-->
